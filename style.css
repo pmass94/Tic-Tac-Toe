@@ -40,12 +40,12 @@ table {
 }
 
 tr {
-    width: 399px;
+    width: 360px;
 }
 
 td {
-    width: 133px;
-    height: 133px;
+    width: 120px;
+    height: 120px;
     border: 5px solid black !important;
     cursor: pointer;
 }
@@ -93,9 +93,11 @@ table tr td:last-child {
     height:10px;
     background-color:rgba(0,0,0,0.5);
     width: 340px;
+    transform:scaleX(0.0);
+    transition:transform 225ms ease-in-out;
 }
 
 .make-vertical {
-    transform: rotate(90deg);
-    top: 375px
+    transform: rotate(90deg) scaleX(0.0);
+    top: 355px
 }
