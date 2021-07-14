@@ -1,14 +1,46 @@
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.player-inactive {
+    opacity: 0.3;
+}
+
+.player-place {
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.img-size {
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+
 table {
     border-collapse: collapse;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
 
 tr {
     width: 399px;
-    
 }
 
 td {
@@ -38,18 +70,32 @@ table tr td:last-child {
     border-right: 0 !important;
 }
 
-.shape{
-    position:absolute;
-    width:6rem;
-    height:6rem;
+.shape {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+
 }
 
 .shape1 {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
 }
 
 .d-none {
-    display:none;
+    display: none;
+}
+
+.horizontal-line {
+    position: absolute;
+    height:10px;
+    background-color:rgba(0,0,0,0.5);
+    width: 340px;
+}
+
+.make-vertical {
+    transform: rotate(90deg);
+    top: 375px
 }
