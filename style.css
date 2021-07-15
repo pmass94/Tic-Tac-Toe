@@ -74,7 +74,6 @@ table tr td:last-child {
     position: absolute;
     width: 6rem;
     height: 6rem;
-
 }
 
 .shape1 {
@@ -90,14 +89,54 @@ table tr td:last-child {
 
 .horizontal-line {
     position: absolute;
-    height:10px;
-    background-color:rgba(0,0,0,0.5);
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 340px;
-    transform:scaleX(0.0);
-    transition:transform 225ms ease-in-out;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
 }
 
 .make-vertical {
     transform: rotate(90deg) scaleX(0.0);
     top: 355px
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    animation: zoomIn 225 ease-in-out;
+}
+
+.restart {
+    background-color: #b4b6bf;
+    position: absolute;
+    bottom: 0;
+    height: 21vh;
+    width: 100%;
+}
+
+.restart-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+}
+
+.restart-btn {
+    font-size: 30px !important;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
