@@ -102,13 +102,16 @@ table tr td:last-child {
 }
 
 .game-over {
+    background-image: url(img/champion.jpg);
+    background-position: top;
     position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 80vh;
-    object-fit: cover;
     animation: zoomIn 225 ease-in-out;
 }
 
