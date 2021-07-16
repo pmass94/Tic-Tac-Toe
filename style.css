@@ -115,6 +115,21 @@ table tr td:last-child {
     animation: zoomIn 225 ease-in-out;
 }
 
+.draw-game {
+    background-image: url(img/draw.png);
+    background-position: center;
+    background-color: #97a6a6;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80vh;
+    animation: zoomIn 225 ease-in-out;
+}
+
 .restart {
     background-color: #b4b6bf;
     position: absolute;

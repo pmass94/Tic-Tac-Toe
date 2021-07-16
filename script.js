@@ -1,10 +1,14 @@
 let fields = [];
 let gameOver = false;
 let audio_win = new Audio('audio/winner.mp3');
+let audio_draw = new Audio('audio/draw.mp3');
+let counter = 0;
 
 let currentShape = 'cross';
 
 function fillShape(id) {
+    counter++;
+
     if (!fields[id] && !gameOver) {
         if (currentShape == 'cross') {
             currentShape = 'circle';
@@ -19,6 +23,7 @@ function fillShape(id) {
         fields[id] = currentShape;
         draw();
         checkForWin();
+
     }
 }
 
@@ -95,13 +100,25 @@ function checkForWin() {
             document.getElementById('restart-div').classList.remove('d-none');
             audio_win.play();
         }, 1000);
-
     }
+
+    else if (counter == 9) {
+        gameOver = true;
+
+        setTimeout(function () {
+            document.getElementById('draw-game').classList.remove('d-none');
+            document.getElementById('restart-div').classList.remove('d-none');
+            audio_draw.play();
+        }, 1000);
+    }
+
 }
+
 
 function restart() {
     gameOver = false;
     fields = [];
+    counter = 0;
 
 
     for (let i = 0; i < 8; i++) {
@@ -111,7 +128,7 @@ function restart() {
     setTimeout(function () {
         document.getElementById('game-over').classList.add('d-none');
         document.getElementById('restart-div').classList.add('d-none');
-
+        document.getElementById('draw-game').classList.add('d-none');
 
         for (let i = 0; i < 9; i++) {
             document.getElementById('circle-' + i).classList.add('d-none');
